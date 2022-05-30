@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15" />
+    <title>Assigment3 Status</title>
+</head>
+<style type="text/css">
+    p{
+        align-content: center;
+    }
+    div{
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+    }
+</style>
+<body>
+    <Center><h1>Status Cuaca</h1></Center>
+    {{if eq .status_water "aman"}}
+        <div style="background-color: green; width: 500px;">
+            <h1 style="color: white; text-align: center;">
+                {{.water}} meter =  {{.status_water}}
+            </h1>
+        </div>
+    {{end}}
+    {{if eq .status_water "siaga"}}
+        <div style="background-color: yellow; width: 500px;">
+            <h1 style="color: black; text-align: center;">
+                {{.water}}  meter = {{.status_water}}
+            </h1>
+        </div>
+    {{end}}
+    {{if eq .status_water "bahaya"}}
+        <div style="background-color: red; width: 500px;">
+            <h1 style="color: white; text-align: center;">
+                {{.water}}  meter = {{.status_water}}
+            </h1>
+        </div>
+    {{end}}
+
+    <br>
+
+    {{if eq .status_wind "aman"}}
+        <div style="background-color: green; width: 500px;">
+            <h1 style="color: white; text-align: center;">
+                {{.wind}}  meter/second = {{.status_wind}}
+            </h1>
+        </div>
+    {{end}}
+    {{if eq .status_wind "siaga"}}
+        <div style="background-color: yellow; width: 500px;">
+            <h1 style="color: black; text-align: center;">
+                {{.wind}}  meter/second =  {{.status_wind}}
+            </h1>
+        </div>
+    {{end}}
+    {{if eq .status_wind "bahaya"}}
+        <div style="background-color: red; width: 500px;">
+            <h1 style="color: white; text-align: center;">
+                {{.wind}}  meter/second = {{.status_wind}}
+            </h1>
+        </div>
+    {{end}}
+</body>
+</html>
